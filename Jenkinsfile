@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    stages {
     stage('master-branch-stuff') {
     when {
         branch 'master'
@@ -26,7 +27,7 @@ pipeline {
         echo 'run this stage - when branch is not equal to master'
     }
 }
-    stages {
+
         stage('Build') {
             steps {
                 echo 'Building..'
